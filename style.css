@@ -1,0 +1,171 @@
+/* ========== VARIABLES ========== */
+:root {
+  --ff: "Work Sans", sans-serif;
+
+  --fw-n: 300;
+  --fw-m: 600;
+  --fw-b: 900;
+
+  --fs-1: clamp(5rem, 5vw, 8rem);
+  --fs-2: clamp(2.1rem, 5vw, 3.5rem);
+  --fs-3: clamp(1.6rem, 5vw, 1.8rem);
+  --fs-p: 1.6rem;
+
+  --f-clr: black;
+  --f-lh: 1.4;
+
+  --nav-color: #131372;
+  --background-color: #23244a;
+  --scroll-bar: #2f33a6;
+  --blue: #1464c0;
+  --light-blue: #2c70d6;
+  --accent-clr-1: #3ca7f8;
+  --accent-clr-2: #d6922c;
+}
+/*  ============ Reset ============ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  outline: 2px solid lime;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--scroll-bar);
+  border-radius: 20px;
+  margin-block: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-clr-1);
+  border: 2px solid blue;
+  border-radius: 20px;
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: var(--accent-clr-1) var(--scroll-bar);
+    scrollbar-width: auto;
+  }
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1,
+h2,
+p,
+a,
+li,
+hr,
+label,
+button,
+h3 {
+  color: var(--f-clr);
+}
+
+h1 {
+  font-size: var(--fs-1);
+  text-transform: uppercase;
+  font-weight: var(--fw-b);
+}
+
+h2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-m);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: var(--fs-3);
+}
+
+p {
+  line-height: var(--f-lh);
+}
+a {
+  text-decoration: none;
+}
+
+i,
+li,
+p,
+input,
+textarea {
+  font-size: var(--fs-p);
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  padding: 0.3em 0.5em;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--accent-clr-2);
+  outline-offset: 1px;
+}
+
+label {
+  font-size: var(--fs-3);
+}
+
+button:hover,
+select:hover {
+  cursor: pointer;
+}
+
+/* ========== REUSABLE COMPONENTS ========== */
+.outline-r {
+  outline: 1px solid red;
+}
+
+.container {
+  width: min(80%, 1200px);
+  margin: 0 auto;
+}
+
+.button,
+button {
+  display: inline-block;
+  border: none;
+  padding: 0.4em 0.9em;
+  font-size: var(--fs-p);
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: var(--fw-b);
+  font-family: var(--ff);
+}
+
+.flexcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* ========== Main Page ========== */
