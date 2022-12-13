@@ -1,6 +1,7 @@
 /* ========== VARIABLES ========== */
 :root {
   --ff: "Work Sans", sans-serif;
+  --logo-ff: "Zen Dots", cursive;
 
   --fw-n: 300;
   --fw-m: 600;
@@ -15,12 +16,15 @@
   --f-lh: 1.4;
 
   --nav-color: #131372;
-  --background-color: #23244a;
-  --scroll-bar: #2f33a6;
-  --blue: #1464c0;
-  --light-blue: #2c70d6;
-  --accent-clr-1: #3ca7f8;
-  --accent-clr-2: #d6922c;
+  --background-color: #1c1e26;
+  --highlight-b-clr: #17181f;
+  --scroll-bar: #bc755f;
+
+  --header-clr: #bbbbbb;
+  --text-clr: #db886f;
+  --accent-clr: #ffc819;
+
+  --border-rad: 15px;
 }
 /*  ============ Reset ============ */
 *,
@@ -33,7 +37,6 @@
   margin: 0;
   padding: 0;
   font-size: inherit;
-  outline: 2px solid lime;
 }
 
 html {
@@ -42,6 +45,11 @@ html {
 
 img {
   max-width: 100%;
+}
+
+body {
+  font-family: var(--ff);
+  background-color: var(--background-color);
 }
 
 /* ========== CUSTOM SCROLLBAR ========== */
@@ -77,6 +85,12 @@ label,
 button,
 h3 {
   color: var(--f-clr);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--header-clr);
 }
 
 h1 {
@@ -130,31 +144,37 @@ label {
   font-size: var(--fs-3);
 }
 
-button:hover,
-select:hover {
-  cursor: pointer;
-}
-
-/* ========== REUSABLE COMPONENTS ========== */
-.outline-r {
-  outline: 1px solid red;
-}
-
-.container {
-  width: min(80%, 1200px);
-  margin: 0 auto;
-}
-
 .button,
 button {
   display: inline-block;
   border: none;
   padding: 0.4em 0.9em;
   font-size: var(--fs-p);
-  border-radius: 15px;
+  border-radius: var(--border-rad);
   text-transform: uppercase;
   font-weight: var(--fw-b);
   font-family: var(--ff);
+  height: 100%;
+}
+
+button:hover,
+select:hover {
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid var(--accent-clr);
+  height: 2px;
+}
+/* ========== REUSABLE COMPONENTS ========== */
+.outline-r {
+  outline: 1px solid red;
+}
+
+.container {
+  width: min(60%, 1200px);
+  margin: 0 auto;
+  outline: 2px solid lime;
 }
 
 .flexcc {
@@ -169,3 +189,99 @@ button {
 }
 
 /* ========== Main Page ========== */
+
+/* ========== Nav Bar ========== */
+.logo_text {
+  font-family: var(--logo-ff);
+}
+
+.big-nav {
+  padding: 1.5em 0;
+  background-color: black;
+}
+
+.big-nav_container {
+  width: min(80%, 1100px);
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+
+.navalign {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo_text {
+  display: inline;
+  font-size: 2.8rem;
+}
+
+select {
+  font-family: "FontAwesome", "Arial";
+}
+
+/* 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  background: #fff;
+  padding: 1rem 3rem;
+  margin-inline: auto;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.whole_input {
+  margin: 3em;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area {
+  margin-bottom: 3em;
+}
+
+#inputbox {
+  height: 100%;
+  padding: 0;
+  width: 80%;
+  font-size: 3.2rem;
+  background-color: var(--highlight-b-clr);
+  border-radius: var(--border-rad);
+  color: var(--text-clr);
+
+  padding: 0.3em;
+}
+
+#inputbox:hover {
+  outline: 0.5px solid var(--accent-clr);
+}
+
+select {
+  border: none;
+  height: 100%;
+  background-color: var(--highlight-b-clr);
+  border-radius: var(--border-rad);
+  color: var(--text-clr);
+  outline: 2px solid lime;
+  margin: 0;
+} */
