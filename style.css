@@ -1,9 +1,8 @@
 /* ========== VARIABLES ========== */
 :root {
-  --ff: "Work Sans", sans-serif;
-  --logo-ff: "Zen Dots", cursive;
+  --ff: "Zen Dots", cursive;
 
-  --fw-n: 300;
+  --fw-n: 400;
   --fw-m: 600;
   --fw-b: 900;
 
@@ -12,17 +11,12 @@
   --fs-3: clamp(1.6rem, 5vw, 1.8rem);
   --fs-p: 1.6rem;
 
-  --f-clr: black;
-  --f-lh: 1.4;
+  --nav-color: #16171c;
+  --background-color: #1a1c22;
+  --scroll-bar: #b3b3b3;
 
-  --nav-color: #131372;
-  --background-color: #1c1e26;
-  --highlight-b-clr: #17181f;
-  --scroll-bar: #bc755f;
-
-  --header-clr: #bbbbbb;
-  --text-clr: #db886f;
-  --accent-clr: #ffc819;
+  --header-clr: #bc9d81;
+  --text-clr: #b3b3b3;
 
   --border-rad: 15px;
 }
@@ -43,10 +37,6 @@ html {
   font-size: 62.5%;
 }
 
-img {
-  max-width: 100%;
-}
-
 body {
   font-family: var(--ff);
   background-color: var(--background-color);
@@ -57,13 +47,11 @@ body {
   width: 1rem;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--scroll-bar);
   border-radius: 20px;
   margin-block: 0.5em;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--accent-clr-1);
-  border: 2px solid blue;
+  background-color: var(--scroll-bar);
   border-radius: 20px;
 }
 
@@ -75,18 +63,20 @@ body {
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1,
-h2,
-p,
-a,
-li,
-hr,
-label,
-button,
-h3 {
-  color: var(--f-clr);
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
 }
 
+i,
+li,
+p,
+input,
+textarea {
+  font-size: var(--fs-p);
+}
 h1,
 h2,
 h3 {
@@ -109,52 +99,35 @@ h3 {
   font-size: var(--fs-3);
 }
 
-p {
-  line-height: var(--f-lh);
-}
 a {
   text-decoration: none;
-}
-
-i,
-li,
-p,
-input,
-textarea {
-  font-size: var(--fs-p);
-}
-
-ul {
-  list-style-type: none;
-}
-
-input,
-textarea {
-  padding: 0.3em 0.5em;
-  border: none;
-}
-
-input:focus,
-textarea:focus {
-  outline: 3px solid var(--accent-clr-2);
-  outline-offset: 1px;
 }
 
 label {
   font-size: var(--fs-3);
 }
 
+ul {
+  list-style-type: none;
+}
+
+i {
+  /* for gear logo and github logo */
+  color: var(--header-clr);
+  font-size: 2.4rem;
+}
+
+input:focus {
+  /* outline: none; */
+}
+
 .button,
 button {
-  display: inline-block;
   border: none;
   padding: 0.4em 0.9em;
   font-size: var(--fs-p);
   border-radius: var(--border-rad);
-  text-transform: uppercase;
   font-weight: var(--fw-b);
-  font-family: var(--ff);
-  height: 100%;
 }
 
 button:hover,
@@ -172,9 +145,8 @@ hr {
 }
 
 .container {
-  width: min(60%, 1200px);
+  width: min(80%, 1200px);
   margin: 0 auto;
-  outline: 2px solid lime;
 }
 
 .flexcc {
@@ -191,13 +163,9 @@ hr {
 /* ========== Main Page ========== */
 
 /* ========== Nav Bar ========== */
-.logo_text {
-  font-family: var(--logo-ff);
-}
-
 .big-nav {
   padding: 1.5em 0;
-  background-color: black;
+  background-color: var(--nav-color);
 }
 
 .big-nav_container {
@@ -211,6 +179,7 @@ hr {
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .logo {
@@ -223,65 +192,62 @@ hr {
   font-size: 2.8rem;
 }
 
-select {
-  font-family: "FontAwesome", "Arial";
+nav i {
+  color: var(--text-clr);
 }
 
-/* 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.color-picker > fieldset {
-  border: 0;
-  display: flex;
-  gap: 2rem;
-  width: fit-content;
-  background: #fff;
-  padding: 1rem 3rem;
-  margin-inline: auto;
-  border-radius: 0 0 1rem 1rem;
+/* ========== Expression Input ========== */
+.factorise-container {
+  margin-top: 6em;
 }
 
 .whole_input {
-  margin: 3em;
+  /* margin-top: 2em; */
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .input-area {
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 }
 
 #inputbox {
-  height: 100%;
-  padding: 0;
-  width: 80%;
-  font-size: 3.2rem;
+  height: 70%;
+  width: 100%;
+  font-size: var(--fs-2);
   background-color: var(--highlight-b-clr);
   border-radius: var(--border-rad);
   color: var(--text-clr);
-
   padding: 0.3em;
+  text-align: center;
+  margin-bottom: 0.3em;
+  background: #765141;
+  border: none;
 }
 
-#inputbox:hover {
-  outline: 0.5px solid var(--accent-clr);
+#inputbox:focus {
+  outline: 3px solid #d57c66;
 }
 
 select {
   border: none;
-  height: 100%;
-  background-color: var(--highlight-b-clr);
+  height: 30%;
+  width: clamp(22rem, 20vw, 25rem);
+  background-color: var(--header-clr);
   border-radius: var(--border-rad);
-  color: var(--text-clr);
-  outline: 2px solid lime;
-  margin: 0;
-} */
+  color: #1a1c22;
+  font-size: var(--fs-p);
+  padding: 0.1em;
+  padding-left: 0.8em;
+  cursor: pointer;
+}
+
+#gobutton {
+  letter-spacing: 0.2em;
+  font-size: var(--fs-2);
+  width: 40%;
+  font-weight: 900;
+  background-color: #df9d81;
+}

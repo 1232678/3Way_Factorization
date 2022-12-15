@@ -1,86 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This is a web app that help you factorize your mathematical expression, it gives the full complete step-by-step answer" />
-    <meta name="robots" content="index,follow" />
-    <title>Factorizer | Quad</title>
-    <!-- google fonts, font awesome, css -->
-    <!-- First font for logo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet" />
-    <!-- Second font for text -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="big-nav" id="top">
-      <div class="big-nav_container navalign">
-        <a href="index.html" class="logo">
-          <h1 class="logo_text"><i class="fa-solid fa-gear"></i>QUAD<i class="fa-solid fa-gear"></i></h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="This is a web app that help you factorize your mathematical expression, it gives the full complete step-by-step answer" />
+  <meta name="robots" content="index,follow" />
+  <title>Factorizer | Quad</title>
+  <!-- google fonts, font awesome, css -->
+  <!-- First font for logo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="big-nav" id="top">
+    <div class="big-nav_container navalign">
+      <a href="index.html" class="logo">
+        <h1 class="logo_text">
+          <i class="fa-solid fa-gear"></i>QUAD<i class="fa-solid fa-gear"></i>
+        </h1>
+      </a>
+
+      <nav>
+        <a href="https://github.com/1232678/Quad" target="_blank">
+          <i class="fab fa-github"></i>
         </a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="factorise-container">
+      <header class="flexcc">
+        <h1>Factor</h1>
+      </header>
 
-        <nav>
-          <select name="type" id="type" required>
-            <option value="" disable selected hidden>Solver</option>
-            <a href="./generator.html" style="display: inline"><option value="1">Solver</option></a>
+      <div class="container">
+        <hr />
+        <form class="whole_input">
+          <div class="input-area">
+            <input type="text" name="input box" id="inputbox" placeholder="Enter Equation" required />
+            <select name="method" id="method" required>
+              <option value="" disable selected hidden>method</option>
+              <option value="completing_square">Completing Square</option>
+              <option value="quadratic_equation">Quadratic Equation</option>
+            </select>
+          </div>
 
-            <option value="./index.html"><a href="./generator.html">Generator</a></option>
-          </select>
-        </nav>
-
-        <select name="theme" id="method" required>
-          <option value="" disable selected hidden>&#xf185;</option>
-          <option value="1">theme 1</option>
-          <option value="2">theme 2</option>
-          <option value="3">theme 3</option>
-        </select>
+          <button type="submit" onclick="" id="gobutton">Go!</button>
+        </form>
       </div>
-    </header>
-    <!-- <main>
-      <form class="color-picker" action="">
-        <fieldset>
-          <legend class="visually-hidden">Pick a color scheme</legend>
-          <label for="theme" class="visually-hidden"></label>
-          <input type="radio" name="theme" id="light" checked />
-          default one error here
+    </section>
+    <section class="steps-container"></section>
+  </main>
+</body>
 
-          <label for="theme" class="visually-hidden"></label>
-          <input type="radio" name="theme" id="light" />
-
-          <label for="theme" class="visually-hidden"></label>
-          <input type="radio" name="theme" id="light" />
-        </fieldset>
-      </form>
-      <section class="factorise-area">
-        <header class="flexcc">
-          <h1>Factoorize!</h1>
-        </header>
-
-        <div class="container">
-          <hr />
-          <form class="whole_input">
-            <div class="input-area">
-              <input type="text" name="input box" id="inputbox" placeholder="Enter Equation" required />
-              <select name="method" id="method" required>
-                <option value="" disable selected hidden>Method</option>
-                <option value="sendal_jepit">Sendal Jepit</option>
-                <option value="completing_square">Completing Square</option>
-                <option value="quadratic_equation">Quadratic Equation</option>
-              </select>
-            </div>
-
-            <button type="submit" onclick="">Go</button>
-          </form>
-        </div>
-      </section>
-    </main> -->
-  </body>
 </html>
